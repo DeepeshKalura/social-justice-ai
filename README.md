@@ -1,33 +1,98 @@
-### Project Description: Sentiment Analysis of Social Media on Social Justice Issues
+# Social Justice AI
 
-In this project, we will harness the power of Python to perform sentiment analysis on social media posts related to a specific social justice issue, such as #BlackLivesMatter or #ClimateJustice. The primary objective is to analyze public sentiment and visualize the data to gain insights into how people perceive and discuss these critical topics. By the end of the project, we aim to provide a clear visualization of public opinion, which can be a valuable resource for activists, policymakers, and researchers.
+<img src="./image/banner.png">
 
-### Tools and Libraries:
-1. **Python**: The programming language used for all the coding in this project.
-2. **Tweepy**: A Python library for accessing the Twitter API and collecting tweets.
-3. **TextBlob**: A Python library for processing textual data and performing sentiment analysis.
-4. **Pandas**: A powerful data manipulation and analysis library for organizing tweet data.
-5. **Matplotlib/Seaborn**: Libraries for creating visualizations to represent the sentiment analysis results.
+Social Justice AI is a Streamlit-based application designed to empower communities by providing localized legal knowledge. By utilizing OpenAI's language model, the app offers users accurate legal information tailored to their specific location.
 
-### Project Workflow:
+## Features
 
-#### 1. Setup and Installation
-First, we will set up our Python environment by installing the necessary libraries. Additionally, we will configure access to the Twitter API by setting up a Twitter Developer Account and creating an app to obtain API keys.
+- **Location-Based Legal Information:** Automatically detects the user's location and provides relevant legal information.
+- **Interactive Chat Interface:** Users can ask legal questions through a chat interface, and receive detailed responses from the AI.
+- **User-Friendly Design:** Clean, modern design with custom styling for an enhanced user experience.
 
-#### 2. Data Collection
-Using the Tweepy library, we will fetch tweets that contain a specific hashtag related to the chosen social justice issue. We will aim to collect a substantial number of tweets to ensure our analysis is meaningful and representative.
+## Installation
 
-#### 3. Data Processing
-Once we have the tweets, we will extract relevant information such as the tweet text and timestamp. We will then use TextBlob to perform sentiment analysis on each tweet, calculating sentiment scores that range from -1 (negative sentiment) to +1 (positive sentiment).
+To run the Social Justice AI app locally, follow these steps:
 
-#### 4. Data Visualization
-With the sentiment scores computed, we will use Matplotlib and Seaborn to create visualizations that depict the distribution of sentiments. This will include histograms and density plots to illustrate the overall sentiment landscape of the collected tweets.
+1. **Clone the Repository:**
 
-#### 5. Conclusion and Presentation
-Finally, we will summarize our findings, highlighting key insights from the sentiment analysis. These insights will be compiled into a brief report or presentation, showcasing how public sentiment on the chosen social justice issue varies.
+    ```bash
+    git clone https://github.com/yourusername/social-justice-ai.git
+    cd social-justice-ai
+    ```
 
-### Example Use Case:
-If we choose to analyze tweets containing the hashtag #BlackLivesMatter, our project will provide a visualization of how people are discussing this movement on Twitter. We will be able to see the proportion of positive, negative, and neutral sentiments, offering a snapshot of public opinion and potentially guiding future advocacy efforts.
+2. **Install Dependencies:**
 
-### Project Outcome:
-By the end of this project, we will have a functional Python script that can collect, process, and visualize sentiment data from Twitter. This tool can be adapted for various social justice issues, providing ongoing insights into public sentiment and supporting data-driven decision-making in social justice campaigns.
+    Create a virtual environment and install the required packages:
+
+    ```bash
+    python -m venv env
+    source env/bin/activate  # On Windows use `env\Scripts\activate`
+    pip install -r requirements.txt
+    ```
+
+3. **Set Up Environment Variables:**
+
+    Create a `.env` file in the root directory and add your OpenAI API key:
+
+    ```plaintext
+    OPENAI_API_KEY=your_openai_api_key
+    ```
+
+4. **Run the App:**
+
+    Start the Streamlit app:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+## Usage
+
+1. **Open the App:**
+    - Navigate to `http://localhost:8501` in your web browser.
+
+2. **Interact with the Chat Interface:**
+    - Enter your legal question in the chat input box.
+    - The AI will generate and display a response based on your location.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+
+## Contributing
+
+We welcome contributions to enhance Social Justice AI. To contribute, follow these steps:
+
+1. **Fork the Repository:**
+
+    ```bash
+    git clone https://github.com/DeepeshKalura/social-justice-ai
+    cd social-justice-ai
+    ```
+
+2. **Create a Branch:**
+
+    ```bash
+    git checkout -b feature-branch
+    ```
+
+3. **Make Your Changes:**
+    - Ensure your code follows the existing code style.
+    - Test your changes thoroughly.
+
+4. **Commit and Push:**
+
+    ```bash
+    git add .
+    git commit -m "Description of changes"
+    git push origin feature-branch
+    ```
+
+5. **Create a Pull Request:**
+    - Go to the repository on GitHub and create a pull request.
+
+## Contact
+
+For any questions or feedback, please reach out to us at [deepeshkalurs@gmail.com](mailto:deepeshkalurs@gmail.com).
